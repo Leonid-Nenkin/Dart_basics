@@ -37,10 +37,10 @@ mixin getMailSystem on User {
 }
 
 class UserManager<T extends User> {
-  List<User> users = [];
+  List<T> users = [];
   UserManager(this.users);
 
-  void addUser (User user) {
+  void addUser (T user) {
     users.add(user);
   }
 

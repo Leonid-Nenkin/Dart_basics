@@ -9,3 +9,7 @@ Map<String, int> occurence(List<String> words) {
 
   return count;
 }
+
+void runner() {
+  print(occurence(["hello", "hi", "hello", "one", "two", "two", "three"]));
+}

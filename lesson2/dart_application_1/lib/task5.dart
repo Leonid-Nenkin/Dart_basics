@@ -5,31 +5,38 @@
 // Если в строке есть слова, не являющиеся цифрами от 0 до 9, пропускайте их.
 
 
-int convStrToInt(String str) {
-    var list = [
-        'zero', 
-        'one', 
-        'two', 
-        'three', 
-        'four',
-        'five',
-        'six',
-        'seven',
-        'eight',
-        'nine'
-    ];
-    return list.indexOf(str);
+class StrToIntConverter {
+  int convStrToInt(String str) {
+      var list = [
+          'zero', 
+          'one', 
+          'two', 
+          'three', 
+          'four',
+          'five',
+          'six',
+          'seven',
+          'eight',
+          'nine'
+      ];
+      return list.indexOf(str);
+  }
+
+  Set<int> occurence(String string) {
+    Set<int> numbers = {};
+    var splitted = string.split(' ');
+
+    for (var word in splitted) {
+        int res = convStrToInt(word);
+        if (res != -1) {
+          numbers.add(res);
+        }
+    }
+    return numbers;
+  }
 }
 
-Set<int> occurence(String string) {
-  Set<int> numbers = {};
-  var splitted = string.split(' ');
-
-  for (var word in splitted) {
-      int res = convStrToInt(word);
-      if (res != -1) {
-        numbers.add(res);
-      }
-  }
-  return numbers;
+void runner() {
+  StrToIntConverter test = StrToIntConverter();
+  print(test.occurence('one two three cat dog'));
 }

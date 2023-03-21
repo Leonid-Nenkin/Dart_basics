@@ -11,25 +11,23 @@ import 'package:dart_application_1/task8.dart' as task8;
 
 void main(List<String> arguments) {
   print("-----Task1--------");
-  print(task1.gcd(6, 36));
-  print(task1.lcm(6, 36));
+  task1.runner();
   print("\n");
 
   print("-----Task2--------");
-  print(task2.decToBin(5));
-  print(task2.binToDec('10011110'));
+  task2.runner();
   print("\n");
 
   print("-----Task3--------");
-  print(task3.values("23 Hello 5"));
+  task3.runner();
   print("\n");
 
   print("-----Task4--------");
-  print(task4.occurence(["hello", "hi", "hello", "one", "two", "two", "three"]));
+  task4.runner();
   print("\n");
 
   print("-----Task5--------");
-  print(task5.occurence('one two three cat dog'));
+  task5.runner();
   print("\n");
 
   print("-----Task6--------");
