@@ -2,8 +2,6 @@
 //Реализуйте метод, который разбивает число на простые множители и возвращает их.
 
 class GCD {
-  GCD(int a, int b);
-
   int gcd(int a, int b) {
     if (!isNatural(a)) {
       throw ArgumentError("$a is not natural number");
@@ -21,7 +19,7 @@ class GCD {
     return a;
   }
 
-  bool isNatural(n) { 		
+  bool isNatural(num n) { 		
 	 return (n >= 0.0) && (n.floor() == n);
 	}
 
@@ -59,7 +57,7 @@ class GCD {
 }
 
 void runner() {
-  GCD testGcd = GCD(6,36);
+  GCD testGcd = GCD();
   print(testGcd.gcd(6,36));
   print(testGcd.lcm(6,36));
   print(testGcd.primeNumbers(6));

@@ -3,27 +3,14 @@
 
 
 class NumberParser {
-  bool isNumeric(String str) {
-    try {
-      num.parse(str);
-    } on FormatException {
-      return false;
-    }
-
-    return true;
-  }
-
-
-  List<num?> values(String a){
-    List<num?> b =[];
+  List<num> values(String a){
+    List<num> b =[];
 
     var splitted = a.split(' ');
     print(splitted);
 
     for (var e in splitted){
-      if (isNumeric(e)) {
-        b.add(num.tryParse(e));
-      }
+      b.add(num.tryParse(e));
     }
     return b;
   }
