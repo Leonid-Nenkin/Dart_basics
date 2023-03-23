@@ -45,8 +45,14 @@ class UserManager<T extends User> {
   }
 
   void removeUser (int index) {
-    print("user ${users[index].email} was deleted");
+    if (users.length < (index+1)) {
+      print("There is no such user");
+      return;  
+    }
+
+    String userEmail = users[index].email;
     users.removeAt(index);
+    print("user $userEmail was deleted");
   }
 
   void printEmails() {

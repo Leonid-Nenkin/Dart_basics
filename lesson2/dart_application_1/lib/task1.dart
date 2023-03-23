@@ -2,18 +2,15 @@
 //Реализуйте метод, который разбивает число на простые множители и возвращает их.
 
 class GCD {
-  int a;
-  int b;
-
-  GCD(this.a, this.b);
+  GCD(int a, int b);
 
   int gcd(int a, int b) {
     if (!isNatural(a)) {
-      throw "$a is not natural number";
+      throw ArgumentError("$a is not natural number");
     }
 
     if (!(isNatural(b))) {
-      throw "$b is not natural number";
+      throw ArgumentError("$b is not natural number");
     }
 
     while (b != 0) {
@@ -30,11 +27,11 @@ class GCD {
 
   int lcm (int a, int b) {
     if (!isNatural(a)) {
-      throw "$a is not natural number";
+      throw ArgumentError("$a is not natural number");
     }
 
     if (!(isNatural(b))) {
-      throw "$b is not natural number";
+      throw ArgumentError("$b is not natural number");
     }
 
     return (a / gcd (a, b) * b).toInt();
@@ -63,9 +60,9 @@ class GCD {
 
 void runner() {
   GCD testGcd = GCD(6,36);
-  print(testGcd.gcd(testGcd.a, testGcd.b));
-  print(testGcd.lcm(testGcd.a, testGcd.b));
-  print(testGcd.primeNumbers(testGcd.a));
-  print(testGcd.primeNumbers(testGcd.b));
+  print(testGcd.gcd(6,36));
+  print(testGcd.lcm(6,36));
+  print(testGcd.primeNumbers(6));
+  print(testGcd.primeNumbers(36));
 }
 
