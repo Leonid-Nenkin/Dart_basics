@@ -19,8 +19,8 @@ class GCD {
     return a;
   }
 
-  bool isNatural(num n) { 		
-	 return (n >= 0.0) && (n.floor() == n);
+  bool isNatural(int n) { 		
+	 return (n >= 0.0);
 	}
 
   int lcm (int a, int b) {

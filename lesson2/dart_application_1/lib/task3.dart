@@ -10,6 +10,9 @@ class NumberParser {
     print(splitted);
 
     for (var e in splitted){
+      if (e == null) {
+        continue;
+      }
       b.add(num.tryParse(e));
     }
     return b;
