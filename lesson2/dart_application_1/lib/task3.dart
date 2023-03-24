@@ -10,10 +10,11 @@ class NumberParser {
     print(splitted);
 
     for (var e in splitted){
-      if (e == null) {
+      var res = num.tryParse(e);
+      if (res == null) {
         continue;
       }
-      b.add(num.tryParse(e));
+      b.add(res);
     }
     return b;
   }
